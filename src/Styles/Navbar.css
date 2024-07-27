@@ -1,0 +1,45 @@
+/* Navigation bar */
+.navbar {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+}
+.nav-item {
+  padding: 0 18px;
+}
+.navbar-collapse {
+  display: flex;
+  height: 100%;
+  align-items:flex-end;
+}
+.nav-link {
+  color: rgba(105,105,105, 0.891);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  list-style: none;
+}
+.nav-link:hover {
+  color: rgb(137, 147, 157);
+}
+.brand {
+  font-family: sans-serif;
+  color: rgb(137, 147, 157);
+  font-size: 3rem;
+  display: inline;
+  /* background-color: red; */
+}
+.brand:hover {
+  color: rgb(0, 0, 0) !important;
+  text-shadow: #bdbdbd 0 4px 5px;
+}
+.g-logo {
+  font-size: 3rem;
+  padding: 0;
+}
+.i-logo {
+  color: red;
+  padding: 0;
+}

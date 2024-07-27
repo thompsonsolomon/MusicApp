@@ -1,0 +1,142 @@
+.heroImgCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 30px 0px;
+  height: calc(100vh - 100px);
+}
+/* heroImg TextCon  */
+.textCon {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 5;
+}
+.textCon .slogan {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: inherit;
+  padding-bottom: 25px;
+}
+.left-column {
+  width: 70%;
+}
+/* heroImg Contner  */
+.ImageCon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 7;
+}
+.ImageCon img {
+  border-radius: 50px;
+  width: 100%;
+  mask-image: linear-gradient(
+    to bottom,
+    var(--heroImgMaxGradient)
+  ); /* mask-image: linear-gradient(to bottom, rgb(11, 10, 10), rgba(8, 8, 8, 0)); */
+}
+
+/* heropage Buton  */
+
+.heroBtn {
+  position: relative;
+  padding-top: 10px;
+  top: 10px;
+  padding: 19px 36px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 40px;
+  border: none;
+}
+
+.heroBtn span {
+  position: relative;
+  color: #fff;
+  font-family: Arial;
+  letter-spacing: 8px;
+  z-index: 3;
+}
+
+.heroBtn .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #3bbcf8;
+  box-shadow: inset 0 0 50px #01e701;
+  transition: 0.5s;
+}
+
+.heroBtn .liquid::after,
+.heroBtn .liquid::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #fff;
+}
+
+.heroBtn .liquid::before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.heroBtn .liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+.heroBtn:hover .liquid {
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+/* 
+.heroBtn{
+    position: relative;
+    padding: 19px 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 40px;
+    border: none;
+}
+.heroBtn span{
+    position: relative;
+    color:  white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 8px;
+    z-index: 3;
+}
+.heroBtn .liquid{
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #3bbcf8;
+    box-shadow: inset 0 0 50px #01e701;
+    transition: 0.5s;
+} */

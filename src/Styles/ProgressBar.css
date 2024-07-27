@@ -1,0 +1,88 @@
+/* =========================
+Custom Input range 
+=============================*/
+/* Input range - chrome and safari */
+
+.bar input[type="range"] {
+    --range-progress: 0;  
+    -webkit-appearance: none;
+    position: relative;
+    background: rgb(105, 105, 170, 0.1);
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    cursor: pointer;
+    transition: 3s linear;
+  
+  }
+  
+  /* Input range - firefox */
+  .bar input[type="range"]::-moz-range-track {
+    position: relative;
+    background: rgb(105, 105, 170, 0.1);
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  /* played progress length - Chrome & safari*/
+  .bar input[type="range"]::before {
+    content: '';
+    height: 2px;
+    background: #36e2ec;
+    width: var(--range-progress);
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* played progress length - firefox */
+  .bar input[type="range"]::-moz-range-progress {
+    background: #36e2ec;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    height: 2px;
+  }
+  
+  /* slider thumb - chrome and safari */
+  .bar input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #36e2ec;
+    border-radius: 50%;
+    box-shadow: inset 0 0 3px #36e2ec;  
+    cursor: pointer;
+    position: relative;
+    transition: 1s linear;
+    box-shadow: inset 0 0 3px #36e2ec;  
+  }
+  
+  /* dragging thumb - chrome and safari */
+  .bar input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+  }
+  
+  /* slider thumb - firefox */
+  .bar input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #36e2ec;
+    border-radius: 50%;
+    box-shadow: inset 0 0 3px #36e2ec;  
+    cursor: pointer;
+    position: relative;
+    transition: 1s linear;
+    box-shadow: inset 0 0 3px #36e2ec;  
+  }
+  /* dragging thumb - firefox */
+  .bar input[type="range"]:active::-moz-range-thumb {
+    transform: scale(1.2);
+  }
